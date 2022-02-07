@@ -10,9 +10,10 @@ const BlogPage = (props) => {
 };
 
 export const getServerSideProps = async (ctx) => {
+  const { URL } = process.env;
   const { slug } = ctx.params;
-  const response = await fetch(`http://localhost:3000/api/blog/${slug}`).then(
-    (res) => res.json()
+  const response = await fetch(`${URL}/api/blog/${slug}`).then((res) =>
+    res.json()
   );
   return {
     props: response,
