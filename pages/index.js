@@ -7,11 +7,11 @@ function Home(props) {
 }
 
 Home.getInitialProps = async () => {
-  const response = await fetch("http://localhost:3000/api/hello").then((res) =>
-    res.json()
-  );
+  // const response = await fetch("http://localhost:3000/api/hello").then((res) =>
+  //   res.json()
+  // );
   return {
-    name: response.name,
+    name: "Name",
   };
 };
 
